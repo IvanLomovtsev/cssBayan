@@ -1,0 +1,65 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+p {
+    margin: 0 0 5px;
+}
+
+.accordeon {
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.accordeon-item {
+    border: 1px solid red;
+    margin-bottom: 5px;
+}
+
+.accordeon-title {
+    display: block;
+    cursor: pointer;
+    padding: 10px 15px;
+    transition: background-color .2s ease-out;
+}
+
+.accordeon-title-radio {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    transition: background-color .2s ease-out;
+}
+
+
+.accordeon-title:hover {
+    background-color: red;
+}
+
+.accordeon-input {
+    appearance: none;
+    position: absolute;
+}
+
+.accordeon-input-check {
+    appearance: none;
+    position: absolute;
+}
+
+.accordeon-input:hover + .accordeon-title {
+    background-color: red;
+}
+
+.accordeon-input-check:hover + .accordeon-content {
+    display: block;
+}
+
+.accordeon-input-check:checked + .accordeon-content {
+    display: block;
+}
+
+.accordeon-content {
+    display: none;
+}
+
