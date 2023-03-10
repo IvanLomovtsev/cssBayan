@@ -11,55 +11,57 @@ p {
 .accordeon {
     max-width: 500px;
     margin: 20px auto;
+    padding: 50px;
+    background-color: bisque;
+    border-radius: 30px;
+    color: blue;
 }
 
-.accordeon-item {
+.accordeon:hover {
+    color: black;
+}
+
+.meme-item {
     border: 1px solid red;
     margin-bottom: 5px;
 }
 
-.accordeon-title {
+.meme-title {
     display: block;
     cursor: pointer;
     padding: 10px 15px;
     transition: background-color .2s ease-out;
 }
 
-.accordeon-title-radio {
+.meme-img {
     display: block;
-    cursor: pointer;
-    position: absolute;
-    transition: background-color .2s ease-out;
+    width: 200px;
+    height: 200px;
+    margin: auto;
 }
 
-
-.accordeon-title:hover {
+.meme-title:hover {
     background-color: red;
 }
 
-.accordeon-input {
+.meme-input {
     appearance: none;
     position: absolute;
 }
 
-.accordeon-input-check {
-    appearance: none;
-    position: absolute;
-}
-
-.accordeon-input:hover + .accordeon-title {
+.meme-input:hover + .meme-title {
     background-color: red;
 }
 
-.accordeon-input-check:hover + .accordeon-content {
+.meme-input:hover + .meme-content {
     display: block;
 }
 
-.accordeon-input-check:checked + .accordeon-content {
+.meme-input:checked + .meme-content {
     display: block;
 }
 
-.accordeon-content {
+.meme-content {
     display: none;
 }
 
