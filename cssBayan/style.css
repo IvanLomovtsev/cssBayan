@@ -1,6 +1,4 @@
-*,
-*:before,
-*:after {
+* {
     box-sizing: border-box;
 }
 
@@ -10,13 +8,37 @@ p {
 
 .accordeon {
     max-width: 500px;
-    margin: 20px auto;
-    padding: 10px 20px 20px;
+    margin: 1% auto;
+    padding: 1% 2% 2%;
     background-color: rgb(250, 226, 197);
-    border-radius: 30px;
+    border-radius: 5%;
     color: blue;
     font-family: Roboto;
     font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 820px) and (min-width: 601px) {
+    .accordeon {
+        font-size: 1.5rem;
+    };
+}
+
+@media screen and (max-width: 601px) {
+    .accordeon {
+        font-size: 2rem;
+    };
+}
+
+@media screen and (max-width: 400px) {
+    h1 {
+        font-size: 2rem;
+    };
+}
+
+.accordeon:hover .meme-icon-on{
+    display: block;
 }
 
 h1 {
@@ -30,24 +52,34 @@ h1 {
 }
 
 .meme-item {
-    border: 1px solid red;
-    margin-bottom: 5px;
-    border-radius: 15px;
+    border: 0.1rem solid red;
+    margin-bottom: 1%;
 }
 
 .meme-title {
-    display: block;
+    display: flex;
+    justify-content: space-between;
     cursor: pointer;
-    padding: 10px 15px;
-    border-radius: 15px;
-    transition: background-color .2s ease-out;
+    padding: 2% 3%;
+    transition: background-color 1s ease-out;
+}
+
+.meme-icon {
+    font-weight: 700;
+    margin-right: 2%;
+    display: none;
 }
 
 .meme-img {
     display: block;
-    width: 200px;
-    height: 200px;
+    width: 50%;
     margin: 1% auto;
+}
+
+@media screen and (max-width: 820px) {
+    .meme-img {
+        width: 80%;
+    }
 }
 
 .meme-title:hover {
@@ -63,17 +95,43 @@ h1 {
     background-color: red;
 }
 
+.meme-title:hover .meme-icon {
+    display: none;
+}
+
+.meme-icon-off {
+    font-weight: 700;
+    margin-right: 2%;
+    display: none;
+}
+
+.meme-title:hover .meme-icon-off {
+    display: block;
+}
+
 .meme-input:hover + .meme-content {
-    max-height: 300px;
+    max-height: 40vw;
 }
 
 .meme-input:checked + .meme-content {
-    max-height: 300px;
+    max-height: 40vw;
+}
+
+@media screen and (max-width: 820px) {
+    .meme-input:hover + .meme-content {
+        max-height: 100vw;
+    }
+    .meme-input:checked + .meme-content {
+        max-height: 100vw;
+    }
+}
+
+.meme-input:checked ~.meme-icon-off {
+    display: block;
 }
 
 .meme-content {
     max-height: 0;
-    transition: all 0.3s ease-in;
+    transition: all 0.5s ease-in;
     overflow: hidden;
 }
-
