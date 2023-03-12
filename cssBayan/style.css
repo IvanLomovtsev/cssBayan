@@ -64,14 +64,16 @@ h1 {
 }
 
 .meme-input:hover + .meme-content {
-    display: block;
+    max-height: 300px;
 }
 
 .meme-input:checked + .meme-content {
-    display: block;
+    max-height: 300px;
 }
 
 .meme-content {
-    display: none;
+    max-height: 0;
+    transition: all 0.3s ease-in;
+    overflow: hidden;
 }
 
