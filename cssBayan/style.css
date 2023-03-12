@@ -11,10 +11,18 @@ p {
 .accordeon {
     max-width: 500px;
     margin: 20px auto;
-    padding: 50px;
-    background-color: bisque;
+    padding: 10px 20px 20px;
+    background-color: rgb(250, 226, 197);
     border-radius: 30px;
     color: blue;
+    font-family: Roboto;
+    font-weight: 500;
+}
+
+h1 {
+    color: black;
+    font-weight: 700;
+    margin: 3% 0;
 }
 
 .accordeon:hover {
@@ -24,12 +32,14 @@ p {
 .meme-item {
     border: 1px solid red;
     margin-bottom: 5px;
+    border-radius: 15px;
 }
 
 .meme-title {
     display: block;
     cursor: pointer;
     padding: 10px 15px;
+    border-radius: 15px;
     transition: background-color .2s ease-out;
 }
 
@@ -37,7 +47,7 @@ p {
     display: block;
     width: 200px;
     height: 200px;
-    margin: auto;
+    margin: 1% auto;
 }
 
 .meme-title:hover {
