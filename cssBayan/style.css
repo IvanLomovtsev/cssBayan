@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+}
+
+p {
+    margin: 0 0 5px;
+}
+
+.accordeon {
+    max-width: 500px;
+    margin: 1% auto;
+    padding: 1% 2% 2%;
+    background-color: rgb(250, 226, 197);
+    border-radius: 5%;
+    color: blue;
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 820px) and (min-width: 601px) {
+    .accordeon {
+        font-size: 1.5rem;
+    };
+}
+
+@media screen and (max-width: 601px) {
+    .accordeon {
+        font-size: 2rem;
+    };
+}
+
+@media screen and (max-width: 400px) {
+    h1 {
+        font-size: 2rem;
+    };
+}
+
+.accordeon:hover .meme-icon-on{
+    display: block;
+}
+
+h1 {
+    color: black;
+    font-weight: 700;
+    margin: 3% 0;
+}
+
+.accordeon:hover {
+    color: black;
+}
+
+.meme-item {
+    border: 0.1rem solid red;
+    margin-bottom: 1%;
+}
+
+.meme-title {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 2% 3%;
+    transition: background-color 1s ease-out;
+}
+
+.meme-icon {
+    font-weight: 700;
+    margin-right: 2%;
+    display: none;
+}
+
+.meme-img {
+    display: block;
+    width: 50%;
+    margin: 1% auto;
+}
+
+@media screen and (max-width: 820px) {
+    .meme-img {
+        width: 80%;
+    }
+}
+
+.meme-title:hover {
+    background-color: red;
+}
+
+.meme-input {
+    appearance: none;
+    position: absolute;
+}
+
+.meme-input:hover + .meme-title {
+    background-color: red;
+}
+
+.meme-title:hover .meme-icon {
+    display: none;
+}
+
+.meme-icon-off {
+    font-weight: 700;
+    margin-right: 2%;
+    display: none;
+}
+
+.meme-title:hover .meme-icon-off {
+    display: block;
+}
+
+.meme-input:hover + .meme-content {
+    max-height: 40vw;
+    transform: scale(1);
+}
+
+.meme-input:checked + .meme-content {
+    max-height: 40vw;
+    transform: scale(1);
+}
+
+@media screen and (max-width: 820px) {
+    .meme-input:hover + .meme-content {
+        max-height: 100vw;
+    }
+    .meme-input:checked + .meme-content {
+        max-height: 100vw;
+    }
+}
+
+.meme-input:checked ~.meme-icon-off {
+    display: block;
+}
+
+.meme-content {
+    max-height: 0;
+    transition: all 0.5s ease-in;
+    overflow: hidden;
+    transform: scale(0.6);
+}
